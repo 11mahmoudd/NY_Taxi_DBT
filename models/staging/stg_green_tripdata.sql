@@ -29,6 +29,7 @@ renamed as (
         improvement_surcharge,
         total_amount,
         payment_type,
+        {{get_payment_type('payment_type')}} as payment_type_descripted,
         trip_type,
         congestion_surcharge
 
