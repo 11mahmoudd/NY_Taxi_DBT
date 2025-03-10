@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: staging
     database: singular-citron-333718
-    schema: dbt_mahmoud
+    schema: de_zoomcamp
 
     tables:
       - name: green_tripdata
