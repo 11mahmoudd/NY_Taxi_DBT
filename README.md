@@ -71,3 +71,5 @@ The **`seeds/`** folder contains **static reference data** used in transformatio
 ✅ **Seed data for static reference tables**  
 ✅ **Reusable SQL macros** for modular transformations  
 ✅ **BigQuery integration** for scalable cloud-based analytics  
+✅ Scheduled dbt Jobs to refresh data daily
+✅ CI/CD Pipeline for automated dbt runs & testing
