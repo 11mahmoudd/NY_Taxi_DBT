@@ -4,7 +4,7 @@
     )
 }}
 
-with tripdata as 
+with trip_data as 
 (
   select *,
     row_number() over(partition by vendorid, lpep_pickup_datetime) as rn
@@ -40,7 +40,7 @@ select
     cast(total_amount as numeric) as total_amount,
     coalesce({{ dbt.safe_cast("payment_type", api.Column.translate_type("integer")) }},0) as payment_type,
     {{ get_payment_type("payment_type") }} as payment_type_description
-from tripdata
+from trip_data
 where rn = 1 and trip_type is not null
 
 
